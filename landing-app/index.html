@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife App</title>
+</head>
+<body>
+
+    <h1>Registro de Usuario - FitLife App</h1>
+
+    <form>
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <label for="nombre">Nombre completo:</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Juan Pérez"
+                autocomplete="name"
+                required>
+
+            <br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="correo@ejemplo.com"
+                autocomplete="email"
+                required>
+
+            <br><br>
+
+            <label for="password">Contraseña:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                autocomplete="new-password"
+                required>
+
+            <br><br>
+
+            <label for="edad">Edad:</label>
+            <input
+                type="number"
+                id="edad"
+                name="edad"
+                min="13"
+                max="120"
+                required>
+
+            <br><br>
+
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input
+                type="date"
+                id="fechaNacimiento"
+                name="fechaNacimiento"
+                required>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Información de Usuario</legend>
+
+            <label for="usuario">Nombre de usuario:</label>
+            <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                placeholder="usuario123"
+                minlength="5"
+                maxlength="12"
+                pattern="[A-Za-z0-9]{5,12}"
+                required>
+
+            <br><br>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Seleccione un país</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Chile">Chile</option>
+                <option value="Brasil">Brasil</option>
+            </select>
+
+            <br><br>
+
+            <label for="ciudad">Ciudad:</label>
+            <input
+                list="ciudades"
+                id="ciudad"
+                name="ciudad"
+                required>
+
+            <datalist id="ciudades">
+                <option value="Buenos Aires">
+                <option value="Córdoba">
+                <option value="Rosario">
+                <option value="Mendoza">
+            </datalist>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Información Personal</legend>
+
+            <p>Género:</p>
+
+            <input type="radio" id="femenino" name="genero" value="Femenino" required>
+            <label for="femenino">Femenino</label>
+
+            <input type="radio" id="masculino" name="genero" value="Masculino">
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" id="otro" name="genero" value="Otro">
+            <label for="otro">Otro</label>
+
+            <br><br>
+
+            <p>Intereses:</p>
+
+            <input type="checkbox" id="fitness" name="intereses" value="Fitness">
+            <label for="fitness">Fitness</label>
+
+            <input type="checkbox" id="nutricion" name="intereses" value="Nutrición">
+            <label for="nutricion">Nutrición</label>
+
+            <input type="checkbox" id="salud" name="intereses" value="Salud">
+            <label for="salud">Salud</label>
+
+            <input type="checkbox" id="deporte" name="intereses" value="Deporte">
+            <label for="deporte">Deporte</label>
+
+            <br><br>
+
+            <label for="bio">Biografía corta:</label>
+
+            <textarea
+                id="bio"
+                name="biografia"
+                rows="5"
+                maxlength="300"
+                placeholder="Cuéntanos sobre ti..."
+                aria-label="Biografía del usuario"></textarea>
+
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Registrarse</button>
+
+    </form>
+
+    <hr>
+
+    <section>
+
+        <h2>Contacto y Soporte Técnico</h2>
+
+        <form>
+
+            <label for="nombreContacto">Nombre:</label>
+            <input
+                type="text"
+                id="nombreContacto"
+                name="nombreContacto"
+                required>
+
+            <br><br>
+
+            <label for="emailContacto">Email:</label>
+            <input
+                type="email"
+                id="emailContacto"
+                name="emailContacto"
+                required>
+
+            <br><br>
+
+            <label for="motivo">Motivo de contacto:</label>
+
+            <select id="motivo" name="motivo" required>
+                <option value="">Seleccione una opción</option>
+                <option value="Soporte">Soporte técnico</option>
+                <option value="Consulta">Consulta</option>
+                <option value="Sugerencia">Sugerencia</option>
+            </select>
+
+            <br><br>
+
+            <label for="mensaje">Mensaje:</label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                aria-label="Mensaje de contacto"
+                required></textarea>
+
+            <br><br>
+
+            <input
+                type="checkbox"
+                id="terminos"
+                name="terminos"
+                required>
+
+            <label for="terminos">
+                Acepto los términos y condiciones
+            </label>
+
+            <br><br>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+    </section>
+
+</body>
+</html>
